@@ -1,0 +1,121 @@
+.projects-section {
+  padding: 100px 20px;
+  color: #e0e0e0; /* light gray text */
+  text-align: center;
+  background-color: #0f0f0f; /* dark background */
+  overflow: hidden;
+}
+
+.projects-title {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: #ff6f61; /* coral accent */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideIn 0.8s forwards 0.2s;
+}
+
+/* Grid layout */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideIn 0.8s forwards 0.4s;
+}
+
+/* Project Card */
+.project-card {
+  background-color: #1a1a1a; /* darker card to match theme */
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideIn 0.8s forwards;
+}
+
+/* Stagger animation for each card */
+.project-card:nth-child(1) { animation-delay: 0.5s; }
+.project-card:nth-child(2) { animation-delay: 0.6s; }
+.project-card:nth-child(3) { animation-delay: 0.7s; }
+.project-card:nth-child(4) { animation-delay: 0.8s; }
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.7);
+}
+
+/* Image */
+.project-image img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.5s, filter 0.5s;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+
+/* Info */
+.project-info {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #ff6f61; /* coral accent */
+}
+
+.project-info p {
+  font-size: 1rem;
+  color: #ccc;
+  flex-grow: 1;
+}
+
+/* Button */
+.project-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 20px;
+  background: #ff6f61;
+  color: white;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.project-btn:hover {
+  background: #ff3b2f; /* darker coral */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Animation */
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

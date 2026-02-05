@@ -1,0 +1,113 @@
+/* Navbar Base */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  padding: 15px 30px;
+  transition: all 0.4s ease;
+  background: transparent;
+}
+
+.navbar.scrolled {
+  background: linear-gradient(90deg, #1a1a1a, #111);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.navbar-logo a {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #00bfff;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.navbar-logo a:hover {
+  color: #ff6ec7;
+  text-shadow: 0 0 10px #ff6ec7;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 25px;
+}
+
+.navbar-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.navbar-links a:hover {
+  color: #00bfff;
+}
+
+.navbar-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background: #00bfff;
+  transition: width 0.3s ease;
+}
+
+.navbar-links a:hover::after {
+  width: 100%;
+}
+
+/* Active Link Glow */
+.navbar-links a.active-link {
+  color: #00bfff;
+}
+.navbar-links a.active-link::after {
+  width: 100%;
+  background: #ff6ec7;
+}
+
+/* Hamburger */
+.navbar-toggle {
+  display: none;
+  cursor: pointer;
+  color: #fff;
+  transition: transform 0.3s;
+}
+
+.navbar-toggle:hover {
+  transform: scale(1.2);
+}
+
+/* Mobile */
+@media(max-width:768px) {
+  .navbar-links {
+    position: fixed;
+    top: 65px;
+    right: -100%;
+    width: 60%;
+    height: 100vh;
+    background: rgba(26,26,26,0.95);
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.4s ease;
+  }
+
+  .navbar-links.active {
+    right: 0;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+}

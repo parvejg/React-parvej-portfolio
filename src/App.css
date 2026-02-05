@@ -1,0 +1,33 @@
+/* App.css */
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  /* background-color: #f5f5f5; */
+   scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+   scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+
+main {
+  /* padding-bottom agar hai to remove */
+  overflow: hidden;
+}
+main::-webkit-scrollbar{
+    scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+:root {
+  --primary-color: #333;
+  --secondary-color: #555;
+}
+/* Hide scrollbar for all browsers while keeping scroll functionality */
+
+
