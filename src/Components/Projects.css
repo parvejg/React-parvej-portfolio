@@ -4,6 +4,7 @@
   text-align: center;
   background-color: #0f0f0f; /* dark background */
   overflow: hidden;
+  margin-top: 3rem;
 }
 
 .projects-title {
@@ -13,6 +14,11 @@
   opacity: 0;
   transform: translateY(20px);
   animation: fadeSlideIn 0.8s forwards 0.2s;
+}
+.project-btn.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 /* Grid layout */

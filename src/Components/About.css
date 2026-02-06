@@ -6,8 +6,9 @@
   align-items: center;
   padding: 100px 20px;
   min-height: 80vh;
-  background-color: #f5f5f5;
+  background-color: #69645b;
   color: #1a1a1a;
+  margin-top: 4rem;
 }
 
 .about-content {
@@ -63,6 +64,7 @@
   display: flex;
   justify-content: center;
   animation: fadeInRight 1.2s ease forwards;
+  height: 500px;
 }
 
 .about-image img {

@@ -19,17 +19,19 @@ export const Footer = () => {
             <BsGithub className="icon" />
           </a>
           <a
-            href="https://www.linkedin.com/in/yourprofile/"
+            href="https://www.linkedin.com/in/md-parvej-6b6a5a259/"
             target="_blank"
             rel="noreferrer"
             className="text-light fs-4"
           >
             <BsLinkedin className="icon"/>
           </a>
-          <a
-            href="mailto:youremail@example.com"
-            className="text-light fs-4"
-          >
+       <a
+  href="mailto:parvezpg321@gmail.com"
+  className="text-light fs-4"
+  aria-label="Send Email"
+>
+
             <BsEnvelopeFill className="icon"/>
           </a>
         </div>

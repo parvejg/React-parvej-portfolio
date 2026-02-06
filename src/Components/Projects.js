@@ -9,7 +9,7 @@ const projectsData = [
     image:
       "https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=600",
     // Example: Laptop with code web dev theme (free @ Pexels) :contentReference[oaicite:2]{index=2}
-    link: "https://yourproject1.live",
+    link: "",
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ const projectsData = [
     image:
       "https://images.pexels.com/photos/3945683/pexels-photo-3945683.jpeg?auto=compress&cs=tinysrgb&w=600",
     // Example: Online shopping / e‑commerce image (free @ Pexels) :contentReference[oaicite:3]{index=3}
-    link: "https://yourproject2.live",
+     link: "",
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ const projectsData = [
     image:
       "https://images.pexels.com/photos/3861972/pexels-photo-3861972.jpeg?auto=compress&cs=tinysrgb&w=600",
     // Example: Blogging on laptop or writing image (free @ Pexels) :contentReference[oaicite:4]{index=4}
-    link: "https://yourproject3.live",
+     link: "",
   },
   {
     id: 4,
@@ -36,7 +36,7 @@ const projectsData = [
     image:
       "https://images.pexels.com/photos/897817/pexels-photo-897817.jpeg?auto=compress&cs=tinysrgb&w=600",
     // Example: Person planning/working at desk (free @ Pexels) :contentReference[oaicite:5]{index=5}
-    link: "https://yourproject4.live",
+    link: "",
   },
 ];
 
@@ -45,24 +45,41 @@ export const Projects = () => {
   return (
     <section className="projects-section" id="projects">
       <h2 className="projects-title">My Projects</h2>
+
       <div className="projects-grid">
-        {projectsData.map((project) => (
-          <div key={project.id} className="project-card">
-            <div className="project-image">
-              <img src={project.image} alt="projects" />
+        {projectsData.map((project) => {
+          const isDisabled =
+            !project.link || project.link.trim() === "";
+
+          return (
+            <div key={project.id} className="project-card">
+              <div className="project-image">
+                <img src={project.image} alt={project.title} />
+              </div>
+
+              <div className="project-info">
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+
+                <a
+                  href={isDisabled ? undefined : project.link}
+                  className={`project-btn ${isDisabled ? "disabled" : ""}`}
+                  target={isDisabled ? undefined : "_blank"}
+                  rel="noreferrer"
+                  aria-disabled={isDisabled}
+                  onClick={(e) => {
+                    if (isDisabled) e.preventDefault();
+                  }}
+                >
+                  {isDisabled ? "Coming Soon" : "View Project"}
+                </a>
+              </div>
             </div>
-            <div className="project-info">
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
-              <a href={project.link} className="project-btn" target="_blank" rel="noreferrer">
-                View Project
-              </a>
-            </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );
 };
 
-export default Projects;
+

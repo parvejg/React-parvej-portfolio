@@ -17,12 +17,19 @@ const About = () => {
           <span className="skill">CSS</span>
           <span className="skill">JavaScript</span>
           <span className="skill">React.js</span>
-          <span className="skill">Node.js</span>
           <span className="skill">Git</span>
+
+
+
+                <span className="skill">Angular.js</span>
+          <span className="skill">MySql</span>
+          <span className="skill">ASP.NET Web API</span>
+          <span className="skill">Github</span>
+          <span className="skill">Linux</span>
         </div>
       </div>
       <div className="about-image">
-        <img src="/Images/parvej-picc.jpg" alt="About Me" />
+        <img src="/Images/parvej-picc.jpg" alt="About Me" className="about-imagee" />
       </div>
     </section>
   );
