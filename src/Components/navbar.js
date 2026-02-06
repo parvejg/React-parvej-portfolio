@@ -2,6 +2,9 @@
 import { BsFillPersonFill, BsEnvelopeFill, BsHouseFill, BsCardChecklist } from 'react-icons/bs';
 import './navbar.css'
 import { Link } from 'react-router-dom';
+import logo from "/Images/parvej-logo.jpg";
+
+<img src={logo} className="logo" alt="logo" />
 
 export function Navbar(){
   return (
