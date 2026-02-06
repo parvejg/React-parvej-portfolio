@@ -12,7 +12,6 @@ export function Navbar(){
           <img src='/images/parvej-logo.jpg' className='logo' alt="logo" />
         </Link>
 
-        {/* Hamburger Toggle */}
         <button
           className="navbar-toggler"
           type="button"
