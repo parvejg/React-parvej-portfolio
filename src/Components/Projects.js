@@ -49,7 +49,7 @@ export const Projects = () => {
         {projectsData.map((project) => (
           <div key={project.id} className="project-card">
             <div className="project-image">
-              <img src={project.image} alt={project.title} />
+              <img src={project.image} alt="projects" />
             </div>
             <div className="project-info">
               <h3>{project.title}</h3>

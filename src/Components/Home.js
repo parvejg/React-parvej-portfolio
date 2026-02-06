@@ -46,7 +46,7 @@ const Home = () => {
           <div className="profile-circle">
             <img
               src="/Images/parvej-picc.jpg"
-              alt="Md Parvez"
+              alt="parvez-image"
               className="home-image"
             />
             <div className="glow-ring"></div>

@@ -9,7 +9,7 @@ export function Navbar(){
       <div className="container">
         {/* Logo / Brand */}
         <Link className="navbar-brand" to="/">
-          <img src='/images/parvej-logo.jpg' className='logo' alt="Parvej Logo" />
+          <img src='/images/parvej-logo.jpg' className='logo' alt="logo" />
         </Link>
 
         {/* Hamburger Toggle */}
